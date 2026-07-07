@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cyan-neon: #00F0FF;
+  --color-pink-neon: #FF007F;
+  --color-deep-bg: #050505;
+  --color-glass-card: rgba(8, 12, 24, 0.45);
+  --color-glass-border: rgba(0, 240, 255, 0.15);
+  
+  --animate-float-slow: float 8s ease-in-out infinite;
+  --animate-float-medium: float 6s ease-in-out infinite;
+  --animate-float-fast: float 4s ease-in-out infinite;
+  --animate-scanline: scan 10s linear infinite;
+  --animate-scan-laser: laser 2.5s ease-in-out infinite;
+  --animate-glow-pulse: pulse-glow 2s ease-in-out infinite;
+  --animate-flicker: flicker 0.15s infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+@keyframes scan {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes laser {
+  0%, 100% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    top: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.2), inset 0 0 15px rgba(0, 240, 255, 0.1);
+    border-color: rgba(0, 240, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.5), inset 0 0 25px rgba(0, 240, 255, 0.25);
+    border-color: rgba(0, 240, 255, 0.7);
+  }
+}
+
+@keyframes flicker {
+  0% { opacity: 0.97; }
+  50% { opacity: 1; }
+  100% { opacity: 0.98; }
+}
+
+:root {
+  --background: #050505;
+  --foreground: #e2e8f0;
+}
+
+body {
+  background-color: #050505;
+  color: #e2e8f0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Holographic Matrix Background Grid */
+.holo-grid {
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.holo-radial {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(10, 20, 50, 0.6) 0%, #050505 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.holo-scanlines {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(8, 12, 24, 0.45);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-neon {
+  background: rgba(8, 12, 24, 0.6);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.15), inset 0 0 15px rgba(0, 240, 255, 0.05);
+}
+
+.glass-panel-pink {
+  background: rgba(16, 8, 20, 0.6);
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255, 0, 127, 0.3);
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.15);
+}
+
+/* Glow Texts */
+.text-neon-cyan {
+  color: #00F0FF;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.6), 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+.text-neon-pink {
+  color: #FF007F;
+  text-shadow: 0 0 8px rgba(255, 0, 127, 0.6), 0 0 15px rgba(255, 0, 127, 0.3);
+}
+
+/* Custom Scrollbar for holographic feel */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(5, 5, 5, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.3);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.6);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.8);
+}
+
+/* Scanner Laser Line */
+.scan-laser {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00F0FF, transparent);
+  box-shadow: 0 0 8px 1px #00F0FF;
+}
+
+/* Micro animations */
+.hover-neon:hover {
+  border-color: #00F0FF;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+  transform: scale(1.02);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
