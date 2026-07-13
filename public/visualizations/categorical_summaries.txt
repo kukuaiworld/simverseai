@@ -1,0 +1,26 @@
+=== Frequency Table for: Gender ===
+        Count  Percentage (%)
+Gender                       
+Female    496            49.6
+Male      457            45.7
+Other      47             4.7
+
+=== Frequency Table for: Smoking_Status ===
+                Count  Percentage (%)
+Smoking_Status                       
+Non-smoker        549            54.9
+Former            250            25.0
+Current           201            20.1
+
+=== Frequency Table for: Diabetic ===
+          Count  Percentage (%)
+Diabetic                       
+0           885            88.5
+1           115            11.5
+
+=== Frequency Table for: Heart_Disease ===
+               Count  Percentage (%)
+Heart_Disease                       
+0                744            74.4
+1                256            25.6
+
