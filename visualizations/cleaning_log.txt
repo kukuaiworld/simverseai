@@ -1,0 +1,17 @@
+Detected duplicate records: 10
+Shape after removing duplicates: (1000, 11)
+
+Missing values before imputation:
+  - BMI: 25 missing values
+  - Cholesterol: 30 missing values
+Imputed missing BMI with median (25.0)
+Imputed missing Cholesterol with median (240.0)
+
+Outlier Detection (using IQR method):
+  - Age: 0 outliers detected (IQR bounds: [-17.0, 119.0])
+  - BMI: 22 outliers detected (IQR bounds: [17.4, 33.1])
+  - Systolic_BP: 5 outliers detected (IQR bounds: [109.7, 174.6])
+  - Diastolic_BP: 8 outliers detected (IQR bounds: [65.0, 107.8])
+  - Cholesterol: 3 outliers detected (IQR bounds: [152.2, 325.9])
+  - Exercise_Hours_Wk: 2 outliers detected (IQR bounds: [-0.6, 11.8])
+Clipped extreme BMI outliers to [12.0, 60.0] and Cholesterol to [100.0, 450.0]
