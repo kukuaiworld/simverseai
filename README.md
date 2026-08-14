@@ -1,4 +1,24 @@
-# SimVerse AI - Smart City Decision Intelligence Platform
+🚀 SimVerse AI
+
+Track: Smart India Solution
+Project Name: SimVerse AI
+Team Name: Vector Minds
+
+👥 Team
+
+Member| Contact| Role
+Kuldeep Soni| 8949409100| Solution Design
+Sonu Raika| 6378484084| Backend & AI
+
+💡 About the Project
+
+SimVerse AI is an AI-powered decision intelligence platform designed to help cities understand complex situations, simulate possible future scenarios, and make smarter, data-driven decisions.
+
+The platform combines AI, real-time data, simulations, maps, and decision intelligence to provide actionable insights for smart-city planning and management.
+
+🎯 Vision
+
+To build an intelligent city simulation system that helps decision-makers predict, analyze, and respond to urban challenges before they happen.# SimVerse AI - Smart City Decision Intelligence Platform
 
 SimVerse AI is a production-grade full-stack web application designed for municipal command centers, city planners, and government decision-makers. It enables users to simulate urban challenges, evaluate outcomes using Generative AI (Gemini), rank solutions based on weighted multi-criteria scores, and generate printable executive briefs.
 
